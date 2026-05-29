@@ -74,7 +74,7 @@
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 1
+    .registers 1
 
     new-instance v0, Lcom/discord/stores/StoreAuthentication$getShouldShowAgeGate$1;
 
@@ -86,7 +86,7 @@
 .end method
 
 .method public constructor <init>()V
-    .locals 0
+    .registers 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -96,79 +96,15 @@
 
 # virtual methods
 .method public final call(Lcom/discord/models/user/MeUser;Ljava/lang/String;Lcom/discord/api/channel/Channel;)Lcom/discord/stores/StoreNavigation$AgeGate;
-    .locals 8
+    .registers 4
 
-    const-string v0, "2021-02-05T12:00:00+0000"
+    const/4 p0, 0x0
 
-    .line 2
-    invoke-static {v0}, Lcom/discord/utilities/time/TimeUtils;->parseUTCDate(Ljava/lang/String;)J
-
-    move-result-wide v0
-
-    .line 3
-    invoke-virtual {p1}, Lcom/discord/models/user/MeUser;->getHasBirthday()Z
-
-    move-result v2
-
-    const/4 v3, 0x0
-
-    if-nez v2, :cond_0
-
-    invoke-virtual {p1}, Lcom/discord/models/user/MeUser;->getId()J
-
-    move-result-wide v4
-
-    const/16 v2, 0x16
-
-    ushr-long/2addr v4, v2
-
-    const-wide v6, 0x14aa2cab000L
-
-    add-long/2addr v4, v6
-
-    cmp-long v2, v4, v0
-
-    if-lez v2, :cond_0
-
-    .line 4
-    sget-object v3, Lcom/discord/stores/StoreNavigation$AgeGate;->REGISTER_AGE_GATE:Lcom/discord/stores/StoreNavigation$AgeGate;
-
-    goto :goto_0
-
-    :cond_0
-    if-nez p2, :cond_2
-
-    .line 5
-    invoke-virtual {p1}, Lcom/discord/models/user/MeUser;->getHasBirthday()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    if-eqz p3, :cond_2
-
-    .line 6
-    invoke-virtual {p3}, Lcom/discord/api/channel/Channel;->r()Z
-
-    move-result p1
-
-    const/4 p2, 0x1
-
-    if-ne p1, p2, :cond_2
-
-    .line 7
-    sget-object v3, Lcom/discord/stores/StoreNavigation$AgeGate;->NSFW_CHANNEL_AGE_GATE:Lcom/discord/stores/StoreNavigation$AgeGate;
-
-    :cond_2
-    :goto_0
-    return-object v3
+    return-object p0
 .end method
 
 .method public bridge synthetic call(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    .registers 4
 
     .line 1
     check-cast p1, Lcom/discord/models/user/MeUser;
