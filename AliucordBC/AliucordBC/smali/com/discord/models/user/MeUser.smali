@@ -168,7 +168,7 @@
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 2
+    .registers 2
 
     new-instance v0, Lcom/discord/models/user/MeUser$Companion;
 
@@ -182,7 +182,7 @@
 .end method
 
 .method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZILcom/discord/api/premium/PremiumTier;Ljava/lang/String;ZZLjava/lang/String;IILjava/lang/String;Lcom/discord/api/user/NsfwAllowance;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 6
+    .registers 26
 
     move-object v0, p0
 
@@ -292,7 +292,7 @@
 .end method
 
 .method public synthetic constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZILcom/discord/api/premium/PremiumTier;Ljava/lang/String;ZZLjava/lang/String;IILjava/lang/String;Lcom/discord/api/user/NsfwAllowance;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-    .locals 22
+    .registers 44
 
     move/from16 v0, p20
 
@@ -529,7 +529,7 @@
 .end method
 
 .method public constructor <init>(Lcom/discord/api/user/User;)V
-    .locals 23
+    .registers 25
 
     const-string/jumbo v0, "user"
 
@@ -886,7 +886,7 @@
 .end method
 
 .method public static synthetic copy$default(Lcom/discord/models/user/MeUser;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZILcom/discord/api/premium/PremiumTier;Ljava/lang/String;ZZLjava/lang/String;IILjava/lang/String;Lcom/discord/api/user/NsfwAllowance;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lcom/discord/models/user/MeUser;
-    .locals 18
+    .registers 40
 
     move-object/from16 v0, p0
 
@@ -1184,7 +1184,7 @@
 
 # virtual methods
 .method public final component1()J
-    .locals 2
+    .registers 3
 
     invoke-virtual {p0}, Lcom/discord/models/user/MeUser;->getId()J
 
@@ -1194,7 +1194,7 @@
 .end method
 
 .method public final component10()Z
-    .locals 1
+    .registers 2
 
     iget-boolean v0, p0, Lcom/discord/models/user/MeUser;->mfaEnabled:Z
 
@@ -1202,7 +1202,7 @@
 .end method
 
 .method public final component11()Z
-    .locals 1
+    .registers 2
 
     iget-boolean v0, p0, Lcom/discord/models/user/MeUser;->isVerified:Z
 
@@ -1210,7 +1210,7 @@
 .end method
 
 .method public final component12()Ljava/lang/String;
-    .locals 1
+    .registers 2
 
     iget-object v0, p0, Lcom/discord/models/user/MeUser;->token:Ljava/lang/String;
 
@@ -1218,7 +1218,7 @@
 .end method
 
 .method public final component13()I
-    .locals 1
+    .registers 2
 
     invoke-virtual {p0}, Lcom/discord/models/user/MeUser;->getFlags()I
 
@@ -1228,7 +1228,7 @@
 .end method
 
 .method public final component14()I
-    .locals 1
+    .registers 2
 
     invoke-virtual {p0}, Lcom/discord/models/user/MeUser;->getPublicFlags()I
 
@@ -1238,7 +1238,7 @@
 .end method
 
 .method public final component15()Ljava/lang/String;
-    .locals 1
+    .registers 2
 
     iget-object v0, p0, Lcom/discord/models/user/MeUser;->phoneNumber:Ljava/lang/String;
 
@@ -1246,7 +1246,7 @@
 .end method
 
 .method public final component16()Lcom/discord/api/user/NsfwAllowance;
-    .locals 1
+    .registers 2
 
     iget-object v0, p0, Lcom/discord/models/user/MeUser;->nsfwAllowance:Lcom/discord/api/user/NsfwAllowance;
 
@@ -1254,7 +1254,7 @@
 .end method
 
 .method public final component17()Ljava/lang/String;
-    .locals 1
+    .registers 2
 
     invoke-virtual {p0}, Lcom/discord/models/user/MeUser;->getBio()Ljava/lang/String;
 
@@ -1264,7 +1264,7 @@
 .end method
 
 .method public final component18()Ljava/lang/String;
-    .locals 1
+    .registers 2
 
     invoke-virtual {p0}, Lcom/discord/models/user/MeUser;->getBannerColor()Ljava/lang/String;
 
@@ -1274,7 +1274,7 @@
 .end method
 
 .method public final component2()Ljava/lang/String;
-    .locals 1
+    .registers 2
 
     invoke-virtual {p0}, Lcom/discord/models/user/MeUser;->getUsername()Ljava/lang/String;
 
@@ -1284,7 +1284,7 @@
 .end method
 
 .method public final component3()Ljava/lang/String;
-    .locals 1
+    .registers 2
 
     invoke-virtual {p0}, Lcom/discord/models/user/MeUser;->getAvatar()Ljava/lang/String;
 
@@ -1294,7 +1294,7 @@
 .end method
 
 .method public final component4()Ljava/lang/String;
-    .locals 1
+    .registers 2
 
     invoke-virtual {p0}, Lcom/discord/models/user/MeUser;->getBanner()Ljava/lang/String;
 
@@ -1304,7 +1304,7 @@
 .end method
 
 .method public final component5()Z
-    .locals 1
+    .registers 2
 
     invoke-virtual {p0}, Lcom/discord/models/user/MeUser;->isBot()Z
 
@@ -1314,7 +1314,7 @@
 .end method
 
 .method public final component6()Z
-    .locals 1
+    .registers 2
 
     invoke-virtual {p0}, Lcom/discord/models/user/MeUser;->isSystemUser()Z
 
@@ -1324,7 +1324,7 @@
 .end method
 
 .method public final component7()I
-    .locals 1
+    .registers 2
 
     invoke-virtual {p0}, Lcom/discord/models/user/MeUser;->getDiscriminator()I
 
@@ -1334,7 +1334,7 @@
 .end method
 
 .method public final component8()Lcom/discord/api/premium/PremiumTier;
-    .locals 1
+    .registers 2
 
     invoke-virtual {p0}, Lcom/discord/models/user/MeUser;->getPremiumTier()Lcom/discord/api/premium/PremiumTier;
 
@@ -1344,7 +1344,7 @@
 .end method
 
 .method public final component9()Ljava/lang/String;
-    .locals 1
+    .registers 2
 
     iget-object v0, p0, Lcom/discord/models/user/MeUser;->email:Ljava/lang/String;
 
@@ -1352,7 +1352,7 @@
 .end method
 
 .method public final copy(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZILcom/discord/api/premium/PremiumTier;Ljava/lang/String;ZZLjava/lang/String;IILjava/lang/String;Lcom/discord/api/user/NsfwAllowance;Ljava/lang/String;Ljava/lang/String;)Lcom/discord/models/user/MeUser;
-    .locals 21
+    .registers 41
 
     move-wide/from16 v1, p1
 
@@ -1420,7 +1420,7 @@
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
-    .locals 5
+    .registers 7
 
     if-eq p0, p1, :cond_1
 
@@ -1643,7 +1643,7 @@
 .end method
 
 .method public getAvatar()Ljava/lang/String;
-    .locals 1
+    .registers 2
 
     .line 1
     iget-object v0, p0, Lcom/discord/models/user/MeUser;->avatar:Ljava/lang/String;
@@ -1652,7 +1652,7 @@
 .end method
 
 .method public getBanner()Ljava/lang/String;
-    .locals 1
+    .registers 2
 
     .line 1
     iget-object v0, p0, Lcom/discord/models/user/MeUser;->banner:Ljava/lang/String;
@@ -1661,7 +1661,7 @@
 .end method
 
 .method public getBannerColor()Ljava/lang/String;
-    .locals 1
+    .registers 2
 
     .line 1
     iget-object v0, p0, Lcom/discord/models/user/MeUser;->bannerColor:Ljava/lang/String;
@@ -1670,7 +1670,7 @@
 .end method
 
 .method public getBio()Ljava/lang/String;
-    .locals 1
+    .registers 2
 
     .line 1
     iget-object v0, p0, Lcom/discord/models/user/MeUser;->bio:Ljava/lang/String;
@@ -1679,7 +1679,7 @@
 .end method
 
 .method public getDiscriminator()I
-    .locals 1
+    .registers 2
 
     .line 1
     iget v0, p0, Lcom/discord/models/user/MeUser;->discriminator:I
@@ -1688,7 +1688,7 @@
 .end method
 
 .method public final getEmail()Ljava/lang/String;
-    .locals 1
+    .registers 2
 
     .line 1
     iget-object v0, p0, Lcom/discord/models/user/MeUser;->email:Ljava/lang/String;
@@ -1697,7 +1697,7 @@
 .end method
 
 .method public getFlags()I
-    .locals 1
+    .registers 2
 
     .line 1
     iget v0, p0, Lcom/discord/models/user/MeUser;->flags:I
@@ -1706,16 +1706,15 @@
 .end method
 
 .method public final getHasBirthday()Z
-    .locals 1
+    .registers 2
 
-    .line 1
-    iget-boolean v0, p0, Lcom/discord/models/user/MeUser;->hasBirthday:Z
+    const/4 v0, 0x1
 
     return v0
 .end method
 
 .method public getId()J
-    .locals 2
+    .registers 3
 
     .line 1
     iget-wide v0, p0, Lcom/discord/models/user/MeUser;->id:J
@@ -1724,7 +1723,7 @@
 .end method
 
 .method public final getMfaEnabled()Z
-    .locals 1
+    .registers 2
 
     .line 1
     iget-boolean v0, p0, Lcom/discord/models/user/MeUser;->mfaEnabled:Z
@@ -1733,7 +1732,7 @@
 .end method
 
 .method public final getNsfwAllowance()Lcom/discord/api/user/NsfwAllowance;
-    .locals 1
+    .registers 2
 
     .line 1
     iget-object v0, p0, Lcom/discord/models/user/MeUser;->nsfwAllowance:Lcom/discord/api/user/NsfwAllowance;
@@ -1742,7 +1741,7 @@
 .end method
 
 .method public final getPhoneNumber()Ljava/lang/String;
-    .locals 1
+    .registers 2
 
     .line 1
     iget-object v0, p0, Lcom/discord/models/user/MeUser;->phoneNumber:Ljava/lang/String;
@@ -1751,7 +1750,7 @@
 .end method
 
 .method public getPremiumTier()Lcom/discord/api/premium/PremiumTier;
-    .locals 1
+    .registers 2
 
     .line 1
     iget-object v0, p0, Lcom/discord/models/user/MeUser;->premiumTier:Lcom/discord/api/premium/PremiumTier;
@@ -1760,7 +1759,7 @@
 .end method
 
 .method public getPublicFlags()I
-    .locals 1
+    .registers 2
 
     .line 1
     iget v0, p0, Lcom/discord/models/user/MeUser;->publicFlags:I
@@ -1769,7 +1768,7 @@
 .end method
 
 .method public final getToken()Ljava/lang/String;
-    .locals 1
+    .registers 2
 
     .line 1
     iget-object v0, p0, Lcom/discord/models/user/MeUser;->token:Ljava/lang/String;
@@ -1778,7 +1777,7 @@
 .end method
 
 .method public getUsername()Ljava/lang/String;
-    .locals 1
+    .registers 2
 
     .line 1
     iget-object v0, p0, Lcom/discord/models/user/MeUser;->username:Ljava/lang/String;
@@ -1787,7 +1786,7 @@
 .end method
 
 .method public hashCode()I
-    .locals 4
+    .registers 5
 
     invoke-virtual {p0}, Lcom/discord/models/user/MeUser;->getId()J
 
@@ -2067,7 +2066,7 @@
 .end method
 
 .method public isBot()Z
-    .locals 1
+    .registers 2
 
     .line 1
     iget-boolean v0, p0, Lcom/discord/models/user/MeUser;->isBot:Z
@@ -2076,7 +2075,7 @@
 .end method
 
 .method public isSystemUser()Z
-    .locals 1
+    .registers 2
 
     .line 1
     iget-boolean v0, p0, Lcom/discord/models/user/MeUser;->isSystemUser:Z
@@ -2085,7 +2084,7 @@
 .end method
 
 .method public final isVerified()Z
-    .locals 1
+    .registers 2
 
     .line 1
     iget-boolean v0, p0, Lcom/discord/models/user/MeUser;->isVerified:Z
@@ -2094,7 +2093,7 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 3
+    .registers 4
 
     const-string v0, "MeUser(id="
 
